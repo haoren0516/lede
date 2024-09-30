@@ -236,14 +236,11 @@
 			0x00094 0x4e        /* PORT6_STATUS */
 			>;
 	};
-
-	phy4: ethernet-phy@4 {
-		reg = <4>;
-	};
 };
 
 &gmac1 {
 	status = "okay";
+
 	phy-mode = "rgmii";
 	qcom,id = <1>;
 
@@ -260,6 +257,7 @@
 
 &gmac2 {
 	status = "okay";
+
 	phy-mode = "sgmii";
 	qcom,id = <2>;
 
@@ -277,6 +275,7 @@
 
 &pcie1 {
 	status = "okay";
+	max-link-speed = <1>;
 };
 
 &sata_phy {
